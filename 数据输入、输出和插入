@@ -1,0 +1,4 @@
+for age in range(1,4):
+    name = input("请输入您的姓名:")
+    age = input("请输入您的年龄:")
+    print('您的姓名是{},今年{}岁了'.format(name,age))
