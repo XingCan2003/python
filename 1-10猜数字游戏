@@ -1,0 +1,14 @@
+import random
+num = random.randint(1,10)
+while True:
+    guess_num = int(input("请输入你要猜测的数字："))
+    if guess_num == num:
+        print("真厉害，猜对了")
+        break
+    else:
+        if guess_num > num:
+            print("你猜测的数字大了")
+            continue
+        else:
+            print("你猜测的数字小了")
+            continue
