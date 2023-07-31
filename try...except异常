@@ -1,0 +1,10 @@
+try:
+    f = open("C:/hhh.txt","r",encoding="UTF-8")
+except Exception as d:
+    print("出现异常了")
+    f = open("C:/hhh.txt","w",encoding="UTF-8")
+else:
+    print("很高兴，没有异常")
+finally:
+    print("我是finally，有没有异常我都要执行")
+    f.close()
