@@ -1,0 +1,10 @@
+a = open("C:/test1.txt", "w")#读权限，没有文件，直接创建
+b = open("C:/test.txt", "r", encoding="UTF-8")
+for x in b:
+    x = x.strip()#去除首尾的空格和换行符
+    if x.split(",")[4] == "测试":#字符切分，判断是否存在"测试"
+        continue
+    a.write(x)
+    a.write("\n")#进行了strip，所以需要手动换行
+a.close()#关闭文件，顺便flush
+b.close()
