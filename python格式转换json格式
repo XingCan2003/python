@@ -1,0 +1,21 @@
+#json数据和python字典的相互转换
+import json
+#准备列表，列表中的每个元素都是字典，将其转换伟json
+data = [{"name":"张三","age":20},{"name":"李四","age":23},{"name":"王五","age":25}]
+json_str = json.dumps(data,ensure_ascii=False)
+#json.dumps()方法八python数据转化为json数据，ensure_ascii=False是将汉字直接输出，不转换为ASCII
+print(type(json_str))
+print(json_str)
+#准备字典，转换为json
+d = {"name":"周杰伦","addr":"台北"}
+json_str = json.dumps(d,ensure_ascii=False)
+print(type(json_str))
+print(json_str)
+#json转换为列表
+s = '[{"name": "张三", "age": 20}, {"name": "李四", "age": 23}, {"name": "王五", "age": 25}]'
+l = json.loads(s)
+print(type(l))
+#json转换为字典
+s = '{"name": "周杰伦", "addr": "台北"}'
+d = json.loads(s)
+print(type(d))
