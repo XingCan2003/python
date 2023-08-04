@@ -1,0 +1,15 @@
+#定义一个带有成员方法的类
+class student:
+    name = None
+    def say(self):
+        print(f"大家好，我是{self.name},请大家多多关照")
+    def say1(self,ma):
+        print(f"大家好，我是{self.name},{ma}")
+
+stu = student()
+stu.name = "周杰伦"
+stu.say()
+
+stu1 = student()
+stu1.name = "林俊杰"
+stu1.say()
