@@ -1,0 +1,21 @@
+#设计类
+class student:
+    name = None   #记录学生姓名
+    gender = None
+    nationality = None
+    native_place = None
+    age = None
+
+#创建一个对象
+stu1 = student()
+#对属性赋值
+stu1.name = "周杰伦"
+stu1.gender = "男"
+stu1.nationality = "中国"
+stu1.native_place = "上海市"
+stu1.age = 38
+print(stu1.name)
+print(stu1.gender)
+print(stu1.nationality)
+print(stu1.native_place)
+print(stu1.age)
