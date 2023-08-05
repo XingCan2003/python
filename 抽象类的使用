@@ -1,0 +1,35 @@
+#抽象类的使用
+class AC:
+    def cool(self):
+        """制冷"""
+        pass
+    def hot(self):
+        """制热"""
+        pass
+    def swing(self):
+        """左右摆风"""
+        pass
+
+class midea(AC):
+    def cool(self):
+        print("美的空调制冷")
+    def hot(self):
+        print("美的空调制热")
+    def swing(self):
+        print("美的空调左右摆风")
+
+class gree(AC):
+    def cool(self):
+        print("格力空调制冷")
+    def hot(self):
+        print("格力空调制热")
+    def swing(self):
+        print("格力空调左右摆风")
+
+def make(ac:AC):
+    ac.cool()
+#创建对象
+midea1 = midea()
+gree1 = gree()
+make(midea1)
+make(gree1)
