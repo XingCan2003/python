@@ -1,0 +1,14 @@
+def p():
+    raise NameError
+def m():
+    try:
+        print("a")
+        p()
+    except NameError:
+        print("b")
+    except Exception:
+        print("c")
+    finally:
+        print("d")
+    print("e")
+m()
