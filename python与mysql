@@ -1,0 +1,22 @@
+#python与mysql
+from pymysql import Connection
+
+#构建到mysql数据库的链接
+conn = Connection(
+    host = "localhost", #主机名(id)
+    port = 3306,        #端口
+    user = "root",      #用户
+    password = "lmc2003211"  #密码
+)
+
+# print(conn.get_server_info())
+cursor = conn.cursor()   #获取游标对象
+#选择数据库
+conn.select_db("test")
+#执行sql
+#cursor.execute("create table test_pymysql(id int)") #非查询创建列
+cursor.execute("select * from test")  #查询
+results = cursor.fetchall()
+for i in results:
+    print(i)
+conn.close()
