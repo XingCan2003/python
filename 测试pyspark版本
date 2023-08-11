@@ -1,0 +1,13 @@
+#pyspark库
+#导包
+from pyspark import SparkConf,SparkContext
+#创建SparkConf
+conf = SparkConf().setMaster("local[*]").\
+    setAppName("test_spark_app")
+#基于sparkconf类对象创建SparkContext类对象
+sc = SparkContext(conf = conf)
+
+#打印pyspark的运行版本
+print(sc.version)
+#停止sparkcontext对象的运行（停止pyspark程序）
+sc.stop()
