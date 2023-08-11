@@ -1,0 +1,9 @@
+#Response对象的geturl()方法、into()方法、getcode()方法
+import urllib.request
+req = urllib.request.Request("http://www.sohu.com")
+res = urllib.request.urlopen(req)
+
+print(res.geturl())  #获取相关URL
+print(res.info())    #获取相关响应信息
+print(res.getcode()) #获取相关响应状态码
+res.close()
