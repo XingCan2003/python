@@ -2,6 +2,11 @@
 import urllib.request
 
 res = urllib.request.urlopen("http://www.sohu.com")  # 打开和读取URL信息
-html = res.read(350)
-print(html.decode("UTF-8"))  # 将网页信息解码，然后按UTF-8格式解码
+
+#urlopen()函数中的url参数既可以是一个字符串("http://www.sohu.com")，也可以是Request对象
+# req = urllib.request.Request("http://www.sohu.com")  # 先定义一个Request对象
+# res = urllib.request.urlopen(req)
+
+html = res.read(350) #读取网页的前350行
+print(html.decode("UTF-8"))  # 将网页信息解码，前提是知道网页使用的是UTF-8格式
 res.close()
