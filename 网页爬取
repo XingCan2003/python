@@ -1,0 +1,7 @@
+# 使用urllib库获取网页信息
+import urllib.request
+
+res = urllib.request.urlopen("http://www.sohu.com")  # 打开和读取URL信息
+html = res.read(350)
+print(html.decode("UTF-8"))  # 将网页信息解码，然后按UTF-8格式解码
+res.close()
