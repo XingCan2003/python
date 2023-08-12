@@ -1,0 +1,13 @@
+#requests库使用
+#查看get和head方法的返回值类型
+import requests
+r = requests.get("http://www.baidu.com")
+print(type(r))
+r2 = requests.head("http://www.baidu.com")  #head方法可以用更少的流量获取页面的摘要信息
+print(type(r2))
+
+r1 = requests.get("http://www.sohu.com")
+print(r1.status_code)  #status_code:返回HTTP请求的状态  ，200表示连接成功，404表示连接失败
+print(r1.text[:200])  #text:HTTP响应内容的字符串形式，即url对应的页面内容，显示前200个字符
+r.encoding = 'UTF-8'  #encoding:HTTP响应内容的编码方式，如果中文字符无法正常显示，更改编码方式为UTF-8
+print(r.text[:200])
