@@ -1,0 +1,5 @@
+#两数求和
+num = 1.5
+num1 = 3
+sum = num + num1
+print(f"{num} + {num1} = {sum}")
