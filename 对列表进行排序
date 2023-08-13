@@ -1,0 +1,7 @@
+#对简单列表元素排列
+list1 = [20,50,10,40,30]
+list2 = ['bb','ee','aa','dd','cc']
+print(f"原列表为{list1},排序后的列表为:{sorted(list1, reverse = True)}") #sorted函数，原本默认为reverse=False升序,
+print(f"原列表为{list1},排序后的列表为:{sorted(list1)}")
+print(f"原列表为{list2},排序后的列表为:{sorted(list2, reverse = True)}") #sorted函数，原本默认为reverse=False升序,
+print(f"原列表为{list2},排序后的列表为:{sorted(list2)}")
