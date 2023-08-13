@@ -1,0 +1,7 @@
+#计算区间内的所有偶数
+num1 = int(input("请输入区间开始数字:"))
+num2 = int(input("请输入区间结束数字:"))
+print(f"{num1}-{num2}区间内所有的偶数：")
+for i in range(num1, num2+1):
+    if i % 2 == 0:
+        print(f"{i} ",end="")
