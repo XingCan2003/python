@@ -1,10 +1,9 @@
 #将列表里面的元素去重
-list = [1,1,2,3,3]
-list1 = set(list) #将列表转换为集合，集合内不会出现重复的元素
-print(list1)
+list1 = [1,1,2,3,3]
+print(f"原列表{list1}，去重后列表为：", list(set(list1)))    #将列表转换为集合，集合内不会出现重复的元素
 
 a = []
-for i in list:
+for i in list1:
     if i not in a:  #not in 操作符用于检查一个值是否不在列表中，将元素加入新的a列表中
         a.append(i)
-print(a)
+print(f"原列表{list1}，去重后列表为：{a}")
