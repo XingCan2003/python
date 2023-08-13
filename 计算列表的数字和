@@ -1,0 +1,10 @@
+# 计算列表数字的和
+list1 = [1, 2, 3, 4, 5]
+list2 = [20, 30, 40, 50]
+sum = 0
+sum1 = 0
+for i  in list1:
+    sum += i
+for j  in list2:
+    sum1 += j
+print(f"列表1{list1}的数字和为:{sum}，列表2{list2}的数字和为：{sum1}")
