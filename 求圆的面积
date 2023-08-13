@@ -1,0 +1,7 @@
+#求圆的面积
+def S(r):
+     s = 3.14 * r * r
+     return s
+
+r = float(input("请输入圆的半径："))
+print(f"圆的面积为:{S(r)}")
