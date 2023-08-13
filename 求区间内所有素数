@@ -1,0 +1,12 @@
+# 求区间内的所有素数
+num1 = int(input("请输入区间开始数字:"))
+num2 = int(input("请输入区间结束数字:"))
+print(f"{num1}-{num2}区间内的所有素数")
+for i in range(num1, num2 + 1):
+    j = 3
+    for j in range(2, i+1):
+        # print(j)
+        if i % j == 0:
+            break
+    if j == i and i != 2:
+        print(i)
