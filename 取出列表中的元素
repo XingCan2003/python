@@ -1,0 +1,8 @@
+#移除列表中多个元素
+def s(list1,list2):
+    for item in list2:
+        list1.remove(item)   #删除列表中元素
+    return list1
+list1 = [3,5,7,9,11,13]
+list2 = [7,11]
+print(f"从列表1 {list1}里面取出列表2 {list2}后得到：",s(list1,list2))
