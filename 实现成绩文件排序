@@ -1,0 +1,29 @@
+def read_file():
+    result = []
+    with open("test814.txt", encoding="utf-8") as fin:  # with 可以使文件自动关闭
+        for line in fin:
+            line = line[:-1]  # 把最后一个换行符去掉，剩下的赋值给line
+            result.append(line.split(","))  # sqlit分割字符串，addend添加分割字符给result
+    # print(result)
+    return result
+
+
+def sort_grades(datas):
+    return sorted(datas,
+                  key=lambda x: int(x[2]),  # lambda匿名函数，key以下标为2的元素进行排序
+                  reverse=True)  # 结果倒序输出
+
+
+def write_file(datas): #将文件内容进行排序修改
+    with open("test814.txt" ,"w" ,encoding="utf-8") as fout:
+        for data in datas:
+            fout.write(",".join(data) + "\n")  # write：向文件写入字符串
+
+# 读取文件
+datas = read_file()
+print(f"读取文件的：{datas}")
+# 排序数据
+datas = sort_grades(datas)
+print(f"文件排序后为：{datas}")
+# 写出文件
+write_file(datas)
