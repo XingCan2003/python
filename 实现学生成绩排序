@@ -1,0 +1,10 @@
+#实现学生成绩排序
+list1 = [{'sno':101,'sname':"小张",'sgrade':88},
+        {'sno':102,'sname':"小王",'sgrade':78},
+        {'sno':103,'sname':"小宝",'sgrade':98}
+         ]
+
+list2 = sorted(list1,
+               key=lambda x : x["sgrade"])
+print(f"原列表：{list1}")
+print(f"排序后列表：{list2}")
