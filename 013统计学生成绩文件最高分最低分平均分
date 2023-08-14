@@ -1,0 +1,17 @@
+# 统计学生成绩文件最高分最低分平均分
+def compute_score():  # 读取文件
+    scores = []
+    with open("test814.txt", encoding="utf-8") as fin:
+        for line in fin:
+            line = line[:-1]
+            fields = line.split(",")
+            scores.append(int(fields[-1])) #文档里，最后一位下面还要空一位，否则成绩只能读取十位数字
+    max_score = max(scores)                #5个成绩，第6位要保留空白行
+    min_score = min(scores)
+    avg_score = round(sum(scores) / len(scores), 2)  # round保留两位小数
+    return max_score, min_score, avg_score
+
+
+max_score, min_score, avg_score = compute_score()
+print(f"学生成绩最高分为：{max_score}，最低分为：{min_score}，平均分为：{avg_score}")
+
