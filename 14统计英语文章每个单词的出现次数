@@ -1,0 +1,17 @@
+#统计英文文章每个单词的出现次数
+word_count = {}
+with open("test814.txt") as fin:
+    for len in fin:
+        list = len.strip()
+        words = list.split() #取得列表字符串
+        for word in words:   #取得单个字符
+            if word not in word_count: #判断并统计记录
+                word_count[word] = 0
+            word_count[word] += 1
+
+print(word_count)
+print(sorted(   #输出最大值
+    word_count.items(),
+    key=lambda x: x[1],
+    reverse=True
+)[:1])
