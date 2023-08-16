@@ -1,0 +1,9 @@
+#统计目录下所有文件的大小
+import os
+print(os.path.getsize("test814.txt"),"kb")  #获取单个文件的大小
+
+sum_size = 0
+for file in os.listdir("."): #遍历根目录，获取全部文件的大小
+    if os.path.isfile(file): #筛选出普通文件，除去目录文件
+        sum_size += os.path.getsize(file) #总和
+print(f"所有文件的大小为：{sum_size/1000}kb") #大小默认为字节，除去1000后为kb
