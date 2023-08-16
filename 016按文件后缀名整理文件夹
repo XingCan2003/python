@@ -1,0 +1,13 @@
+# 按文件后缀名整理文件夹
+import os,shutil
+
+dir = "D:\计算机科学与技术2204黎茂灿\大学\大学二年级\学习\python\code\idea\hhh"
+
+for file in os.listdir(dir):
+    ext = os.path.splitext(file)[1]
+    ext = ext[1:]
+    if not os.path.isdir(f"{dir}/{ext}"):  #判断目录是否存在，不存在时为真
+        os.mkdir(f"{dir}/{ext}")  #创建目录
+    source_path = f"{dir}/{file}"  #原目录
+    target_path = f"{dir}/{ext}/{file}" #目标目录
+    shutil.move(source_path,target_path) #按后缀名移动文件
