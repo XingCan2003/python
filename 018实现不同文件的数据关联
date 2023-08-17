@@ -1,0 +1,17 @@
+#实现不同文件的关联
+course_tracher = {}
+with open("test817.txt",encoding="utf-8") as fin:
+    for line in fin:
+        line = line.strip()
+        course,teacher = line.split(",")
+        course_tracher[course] = teacher
+
+        # course_grades[course].append(int(grade))
+print(course_tracher)
+# course_grades = {}
+with open("test814.txt",encoding="utf-8") as fin:
+    for line in fin:
+        line = line.strip()
+        course, sno, sname, sgrade = line.split(",")
+        teacher = course_tracher.get(course)
+        print(course,teacher,sno,sname,sgrade)
