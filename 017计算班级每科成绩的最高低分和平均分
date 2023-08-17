@@ -1,0 +1,18 @@
+#计算班级每科成绩的最高低分和平均分
+course_grades = {}
+with open("test814.txt",encoding="utf-8") as fin:
+    for line in fin:
+        line = line.strip()
+        course,sno,sname,grade = line.split(",")
+        if course not in course_grades:
+            course_grades[course] = []
+        course_grades[course].append(int(grade))
+
+print(course_grades)
+for course,grade in course_grades.items():
+    print(
+        course,
+       "最高分：",max(grade),
+       "最低分：",max(grade),
+       "平均分：",sum(grade) / len(grade)
+    )
