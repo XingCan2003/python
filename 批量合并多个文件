@@ -1,0 +1,17 @@
+# 批量合并多个txt文件
+
+import os  # 扫描文件路径等模块
+
+data = "D:/计算机/大学/大学2/学习/python/code/idea/test"
+
+contents = []
+for file in os.listdir(data):  # 输入路径返回其下所有文件和目录组成的列表
+    file_path = f"{data} / {file}"
+    if os.path.isfile(file_path) and file.endswith(".txt"):
+        with open(file_path) as fin:
+            contents.append(fin.read())
+
+final_content = "\n".join(contents)
+
+with open("D:/计算机/大学/大学2/学习/python/code/idea/test.txt", "w") as fout:
+    fout.write(final_content)
