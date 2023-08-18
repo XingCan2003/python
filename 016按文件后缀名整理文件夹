@@ -1,7 +1,7 @@
 # 按文件后缀名整理文件夹
 import os,shutil
 
-dir = "D:\计算机科学与技术2204黎茂灿\大学\大学二年级\学习\python\code\idea\hhh"
+dir = "D:\计算\大学\大学\学习\python\code\idea\hhh"
 
 for file in os.listdir(dir):
     ext = os.path.splitext(file)[1]
