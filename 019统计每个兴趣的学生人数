@@ -1,0 +1,12 @@
+#统计每个兴趣的学生人数
+like_count = {} #定义字典，key为兴趣，value为数量
+with open("test818.txt","r",encoding="utf-8") as fin:
+    for line in fin:
+        line = line.strip() #去掉结尾换行符，文档内容是：小米 羽毛球,乒乓球,
+        sname, likes = line.split(" ") #将名称和兴趣分开，以文档的空格切割字符串
+        like_list = likes.split(",") #将兴趣分割
+        for like  in like_list: #循环遍历兴趣
+            if like not in like_count:  #如果字典中没有该兴趣，则添加进去并数值加一
+                like_count[like] = 0
+            like_count[like] += 1
+print(like_count)
