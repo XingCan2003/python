@@ -1,0 +1,14 @@
+#计算两个时间段之间的时间
+import datetime
+birthday = "2003-2-11" #出生日期的获取
+birthday_date = datetime.datetime.strptime(birthday,"%Y-%m-%d")
+print(birthday_date,type(birthday_date))
+
+curr_datetime = datetime.datetime.now() #当前时间的获取
+print(curr_datetime,type(curr_datetime))
+
+minus_datetime = curr_datetime - birthday_date #计算相隔时间
+print(minus_datetime,type(minus_datetime))
+
+print(minus_datetime.days)
+print(minus_datetime.days / 365)
