@@ -1,0 +1,6 @@
+#将Unix时间戳转换为日期
+import datetime
+unix_time = 1630747647
+datetime_obj = datetime.datetime.fromtimestamp(unix_time) #da.da:表示日期时间，fr：表根据指定时间戳创建da对象
+datetime_str = datetime_obj.strftime("%Y-%m-%d %H:%M:%S")
+print(datetime_str)
