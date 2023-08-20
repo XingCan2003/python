@@ -1,0 +1,16 @@
+# #计算开始和结束范围的所有日期
+import datetime
+
+def get_date_range(begin_date, end_date):
+    date_list = []
+    while begin_date <= end_date:
+        date_list.append(begin_date)  # 将增加的日期，添加到列表里
+        begin_date_object = datetime.datetime.strptime(begin_date, "%Y-%m-%d")
+        days1_timedelta = datetime.timedelta(days=1)  # 增加的天数
+        begin_date = (begin_date_object + days1_timedelta).strftime("%Y-%m-%d")
+    return date_list
+
+begin_date = "2023-07-31"
+end_date = "2023-08-02"
+date_list = get_date_range(begin_date, end_date)
+print(date_list)
