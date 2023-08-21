@@ -1,0 +1,28 @@
+# 计算日期数据周同比
+import datetime
+
+date_sale = {}
+is_first_line = True
+with open("./销售数据.txt") as fin:  # 读取数据并进行整理
+    for line in fin:
+        if is_first_line:
+            is_first_line = False
+            continue
+        line = line.strip()
+        date, sale_number = line.split("\t")
+        date_sale[date] = float[sale_number]
+
+def get_diff_days(date, days):  # 获取当天日期数据
+    curr_date = datetime.datetime.strptime(date, "%Y-%m-%d")
+    timedelta = datetime.timedelta(days=-days)  #获取7天前的日期数据
+    return (curr_date + timedelta).strftime("%Y-%m-%d")
+
+
+for date, sale_number in date_sele.items():
+    date7 = get_diff_days(date, 7)
+    sale_number7 = date_sale.get(date7, 0)
+    if sele_number7 == 0:  # 判断日期前7天是否有数据，没有则输出当前日期数据
+        print(date, sale_number, 0)
+    else:
+        week_diff = (sale_number - sale_number7) / sale_number7
+        print(date, sale_number, date7, sale_number7, week_diff)
