@@ -1,0 +1,18 @@
+#验证密码
+def check_password(password):
+    if not 6 <= len(password) <= 20:
+       return  False,"密码必须在6-20个字符之间"
+    if not re.findall(r"[a-z]",password): #必须在password中搜索到一个小写字符，不然返回false
+       return False, "必须包含至少1个小写字母"
+    if not re.findall(r"[A-Z]",password):
+       return False, "必须包含至少1个大写字母"
+    if not re.findall(r"[0-9]",password):
+       return False, "必须包含至少1个数字"
+    if not re.findall(r"[^0-9a-zA-Z]",password): #除了数字、大小写之外的字符
+       return False, "必须包含至少1个特殊字符"
+    return True, None
+
+print("Helloworld#123",check_password("Helloworld#123"))
+print("Helloworld#",check_password("Helloworld#"))
+print("Helloworld123",check_password("Helloworld123"))
+print("helloworld#123",check_password("helloworld#123"))
