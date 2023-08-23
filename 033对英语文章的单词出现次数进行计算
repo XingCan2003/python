@@ -1,0 +1,11 @@
+#对英语文章中的单词出现次数进行计算
+#本次计算，可以对包含，空格、逗号、斜线、分行符等等特殊符号的文章进行分切
+
+import re
+
+with open("test818.txt") as fin:
+    content = fin.read()
+words = re.split(r"[\s.()-?]+",content) #正则表达式的split函数，可以指定多种分割符
+
+import pandas as pd #数据分析库
+print(pd.Series(words).value_counts()[:20]) #提取前20个出现最多的单词
