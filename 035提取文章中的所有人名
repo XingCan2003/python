@@ -1,0 +1,14 @@
+#提取文章的所有人名
+# content = "李明喜欢黄豆豆，他们早恋了"
+
+with open('test818.txt') as fin:
+    content = fin.read()
+
+import jieba.posseg as posseg #获得文章词和词性
+
+words = []
+for word,flag in posseg.cut(content):
+    print(word, flag)
+
+import pandas as pd   #统计次数
+print(pd.Series(words).value_counts()[:20])
