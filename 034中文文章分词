@@ -1,0 +1,9 @@
+#中文文章分词
+import jieba   #中文分词库
+import re
+
+content = re.sub(r"[\s。...，、]","",content)
+
+word_list = jieba.cut(content)
+
+print(list(word_list))
