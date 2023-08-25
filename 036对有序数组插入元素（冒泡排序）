@@ -1,0 +1,15 @@
+#对有序数组插入元素
+arr = [1,2,9,12,20]
+number = int(input('请输入你要插入的数字:'))
+arr.append(number)
+for i in range(0,len(arr)-1):#冒泡排序
+    flay = 1
+    for j in range(0,len(arr)-1-i):
+        if arr[j] > arr[j+1]:
+            tmp = arr[j]
+            arr[j] = arr[j+1]
+            arr[j+1] = tmp
+            flay = 0
+    if flay == 1:
+        break
+print(arr)
