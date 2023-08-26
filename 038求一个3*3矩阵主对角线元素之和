@@ -1,0 +1,10 @@
+#求一个3*3矩阵主对角线元素之和
+arr = []
+sum = 0.0
+for i in range(3):
+    arr.append([])
+    for j in range(3):
+        arr[i].append(float(input('请输入矩阵元素:\n')))
+        if (j == i):
+            sum += arr[i][j]
+print(f'最后总和为:{sum}')
