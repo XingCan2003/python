@@ -1,0 +1,7 @@
+# 将数组逆序输出
+arr = [5,4,3,2,1]
+print(arr)
+arr1 = []
+for i in range(len(arr)-1,-1,-1):
+    arr1.append(arr[i])
+print(f'{arr1} ',end='')
