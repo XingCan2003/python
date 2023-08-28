@@ -1,0 +1,12 @@
+#两变量交互、输出随机数
+import random
+a = 10
+b = 20
+tmp = 0
+print(f'a={a},b={b}')
+tmp = b
+b = a
+a = tmp
+print(f'a={a},b={b}')
+#生成10到20之间的随机数
+print(random.uniform(10,20))
