@@ -1,0 +1,8 @@
+#求数字的平方
+print('如果平方后的数小于50，程序将停止运行')
+while True:
+    num = int(input('请输入需要平方的数字:'))
+    produt = num * num
+    print(f'运算结果为:{produt}')
+    if produt < 50 :
+        break
