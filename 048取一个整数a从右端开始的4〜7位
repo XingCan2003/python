@@ -1,0 +1,8 @@
+   a = int(input('input a number:\n'))
+    b = a >> 4
+    print(b)
+    c = ~(~0 << 4)
+    print(c)
+    d = b & c
+    print(d)
+    print('%o\t%o' % (a, d))
