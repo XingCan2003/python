@@ -1,0 +1,15 @@
+if __name__ == '__main__':  #测试模块，可以调用测试语句
+    from tkinter import *  #提供各种控件，如按钮，标签和文本框，一个GUI应用程序中使用。这些控件通常被称为控件或者部件
+
+    #width 画布在x坐标轴上的大小，height 高度 ,bg 背景色
+    canvas = Canvas(width=800, height=600, bg='yellow') #画布控件，显示图形元素如线条或文本
+    canvas.pack(expand=YES, fill=BOTH)
+    k = 1
+    j = 1
+    for i in range(0, 26):
+        canvas.create_oval(310 - k, 250 - k, 310 + k, 250 + k, width=1)
+        k += j
+        j += 0.3
+
+    mainloop()
+    root.mainloop()
