@@ -1,0 +1,18 @@
+import numpy as np
+
+arr = np.zeros((10,10)) #二维数组的创建
+n = int(input('请输入要输出的行数:'))
+for i in range(n):
+    arr[i][0] = 1
+    arr[i][i] = 1
+for i in range(2,n):  #从第三排开始才有上两个之和的数
+    for j in range(1,i): 
+        arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j]
+
+blank = n - 1
+for i in range(0,n):
+    for temp in range(1,blank-i+1):
+        print("·",end="")
+    for j in range(0,i+1):
+        print('%4d' % arr[i][j],end="")
+    print()
