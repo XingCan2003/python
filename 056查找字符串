@@ -1,0 +1,8 @@
+#查找字符串
+str1 = "this is string example....wow!!!"
+str2 = "exam"
+#从下标0开始，查找字符串里第一个出现的子串，查找不到返回-1
+
+print(str1.find(str2))
+print(str1.find(str2, 10))
+print(str1.find(str2, 40))
