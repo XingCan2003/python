@@ -1,0 +1,15 @@
+arr = []
+for i in range(0,6):
+    arr.append(int(input(f'请输入第{i+1}个数字:')))
+
+for i in range(0,6):
+    if arr[0] < arr[i]:
+        tmp = arr[i]
+        arr[i] = arr[0]
+        arr[0] = tmp
+    if arr[5] > arr[i]:
+        tmp = arr[i]
+        arr[i] = arr[5]
+        arr[5] = tmp
+
+print(arr)
