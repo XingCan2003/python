@@ -1,0 +1,14 @@
+#输入n个整数，再输入要后移的m，把n个数的列表内容，后移m位
+n = int(input('请输入整数n:'))
+m = int(input('请输入要后移位数m:'))
+arr = []
+for i in range(0,n):
+    arr.append(int(input('请输入一个整数:')))
+print(f'原始列表:{arr}')
+#先取最后一位放在中间变量，然后把前面的数字，从后开始后移一位，后移完把中间变量赋值到第一位，画图理解
+for i in range(m):
+    tmp = arr[n - 1]
+    for j in range(0,n-1):
+        arr[n-j-1] = arr[n-j-2]
+    arr[0] = tmp
+print(f'移动之后:{arr}')
