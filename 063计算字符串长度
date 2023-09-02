@@ -1,0 +1,5 @@
+def calculate(str):
+    return len(str)
+
+s = input('请输入字符串:')
+print(calculate(s))
