@@ -1,0 +1,21 @@
+n = int(input('请输入要录入的学生数量:'))
+arr = []
+for i in range(n):
+    arr.append(['','',[]])
+
+def input_stu(stu):
+    for i in range(n):
+        stu[i][0] = int(input('请输入学号:'))
+        stu[i][1] = input('请输入学生姓名:')
+        for j in range(n):
+            stu[i][2].append(int(input('请输入语数英三科成绩:')))
+
+def print_stu(stu):
+    for i in range(n):
+        print('%-6s%-10s' % (stu[i][0], stu[i][1]))
+        for j in range(n):
+            print('%-8d' % stu[i][2][j])
+            
+input_stu(arr)
+print(arr)
+print_stu(arr)
