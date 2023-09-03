@@ -1,0 +1,17 @@
+stu_dict = {'ljl':20,'sys':40,'lmc':20,'zzw':18}
+# 方法1
+# dict_max = 'ljl'
+# for key in stu_dict.keys():
+#     if stu_dict[dict_max] < stu_dict[key]:
+#         dict_max = key
+# print("%s, %d" % (dict_max, stu_dict[dict_max]))
+# 方法2
+def find_max(dict):
+    max_age = 0
+    for key,value in dict.items():
+        if value > max_age:
+             max_age = value
+             name = key
+    print(name)
+    print(max_age)
+find_max(stu_dict)
