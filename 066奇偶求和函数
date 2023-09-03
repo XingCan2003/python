@@ -1,0 +1,33 @@
+# 输入偶数时，进行分母为偶数的相加，输入奇数时，进行分母为奇数的相加
+num = int(input('请输入一个整数:'))
+def getSum(n):
+    sum = 0.0
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    elif n % 2 == 0:
+        # for i in range(2, n + 1, 2):  #从2开始，每2位一步，取偶数
+        for i in range(1, n + 1):
+            if i % 2 == 0:
+                sum += 1.0 / i
+    else:
+        # for i in range(1, n + 1, 2):  #从1开始，每2位一步，取奇数
+        for i in range(1, n + 1):
+            if i % 2 != 0:
+                sum += 1.0 / i
+    return sum
+print(getSum(num))
+
+#递归方法
+# def sum(n):
+#     if n == 1:
+#         return 1
+#     elif n == 2:
+#         return 1/2
+#     elif n % 2 == 0:
+#         return (1/n + sum(n-2))
+#     elif n % 2 == 1:
+#         return (1/n + sum(n-2))
+# n = int(input("input a number:\n"))
+# print(sum(n))
