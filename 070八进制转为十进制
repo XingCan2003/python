@@ -4,7 +4,7 @@ def f8to10(num):
     length = len(l)
     sum = 0
     for i in range(length):
-        sum += 8 ** i * int(l[length-1-i])
+        sum += 8 ** i * int(l[length-1-i])#**代表求幂，8的i次方，对应的数学函数是pow
     print("转成10进制数为：",sum)
 
 f8to10(122)
