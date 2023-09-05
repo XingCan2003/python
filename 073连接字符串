@@ -1,0 +1,4 @@
+delimiter = ' '
+mylist = ['Brazil', 'Russia', 'India', 'China']
+print(mylist)
+print(delimiter.join(mylist))#判断单词，然后按指定方法连接起来
