@@ -4,7 +4,7 @@ testList = [10086, '中国移动', [1, 2, 4, 5]]
 # 访问列表长度
 print(len(testList))
 # 到列表结尾
-print(testList[1:])
+print(testList[1:]) #表示从第二个元素到最后一个元素
 # 向列表添加元素
 testList.append('i\'m new here!')
 print(len(testList))
