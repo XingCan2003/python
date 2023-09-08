@@ -1,0 +1,6 @@
+#读取7个数（1—50）的整数值，每读取一个值，程序打印出该值个数的＊。
+for i in range(2):
+    n = int(input(f'请输入一个整数,这是第{i+1}个数字:'))
+    for j in range(n):
+        print('*',end="")
+    print()
