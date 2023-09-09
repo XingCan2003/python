@@ -1,10 +1,10 @@
 #向磁盘文件输入字符串，#停止输入
-from sys import stdout
+from sys import stdout    #直接在控制台显示结果
 filename = input('请输入文件名:')
 fp = open(filename,"w")
 ch = input('请输入字符串:')
 while ch != '#':
-    fp.write(ch)
+    fp.write(ch) #write()方法，向文件写入字符串，同时文件指针后移
     stdout.write(ch)
     ch = input('')
 fp.close()
