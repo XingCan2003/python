@@ -1,0 +1,8 @@
+# 将小写字母全部转换成大写字母，然后输出到一个磁盘文件"test"中保存。
+fp = open('test818.txt',"w")
+string = input('请输入字符串:')
+string = string.upper() #小写转大写
+fp.write(string)
+fp = open('test818.txt')
+print(fp.read())
+fp.close()
