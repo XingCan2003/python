@@ -1,0 +1,3 @@
+from dateutil import parser
+dt = parser.parse("Aug 28 2015 12:00AM") #提取日期时间信息，然后按日期格式输出
+print(dt)
