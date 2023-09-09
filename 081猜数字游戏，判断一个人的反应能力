@@ -1,0 +1,27 @@
+#时间函数举例4,一个猜数游戏，判断一个人反应快慢。
+import time
+import random
+play_it = input('你想玩吗?(y/n):')
+while play_it == 'y' or 'Y':
+    i = random.randint(0,2**32) % 100
+    start = time.perf_counter()
+    a = time.time()
+    guess = int(input('请输入你猜的数字:'))
+    while guess != i:
+        if guess > i:
+            guess = int(input('请输入小一点的数字:'))
+        else:
+            guess = int(input('请输入大一点的数字:'))
+    end = time.perf_counter()
+    b = time.time()
+    var = (end - start) / 18.2
+    print(var)
+    if var < 15:
+        print('你的反应速度很快，你很聪明!')
+    elif var < 25:
+        print('你的反应速度为正常水平')
+    else:
+        print('你的反应速度很慢')
+    print('恭喜你')
+    print('你要猜的数字是:%d' % i)
+    play_it = input('你想玩吗？')
