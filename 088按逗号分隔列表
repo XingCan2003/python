@@ -1,0 +1,19 @@
+#按逗号分隔列表
+L = [1, 2, 3, 4, 5]
+L = repr(L)[1:-1]
+print(L)
+
+l = [1,2,3,4,5,6,7];
+k = 1;
+for i in l:
+    print(i,end= ('' if (k == len(l)) else ','));
+    k += 1;
+print()
+
+a=[1,2,3,4]
+for i in range(0,len(a)):
+    if i!=(len(a)-1):
+        print(a[i],end=',')
+    else:
+        print(a[i])
+
