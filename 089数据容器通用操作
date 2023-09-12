@@ -1,0 +1,33 @@
+#容器排序
+my_list = [1,3,2,5,4]
+my_tuple = (3,5,1,4,2)
+my_str = "bdaec"
+my_set = {4,2,5,1,3}
+my_dict = {"key3":1,"key1":4,"key5":2,"key2":3,"key4":5}
+print(f"列表排序的结果是:{sorted(my_list)}")
+print(f"元组排序的结果是:{sorted(my_tuple)}")
+print(f"字符串排序的结果是:{sorted(my_str)}")
+print(f"集合排序的结果是:{sorted(my_set)}")
+print(f"字典排序的结果是:{sorted(my_dict)}")
+#到排序
+print(f"列表倒排序的结果是:{sorted(my_list,reverse=True)}")
+print(f"元组倒排序的结果是:{sorted(my_tuple,reverse=True)}")
+print(f"字符串倒排序的结果是:{sorted(my_str,reverse=True)}")
+print(f"集合倒排序的结果是:{sorted(my_set,reverse=True)}")
+print(f"字典倒排序的结果是:{sorted(my_dict,reverse=True)}")
+#类型转换
+print(f"列表:{my_list}，转为元组:{tuple(my_list)}")
+print(f"列表:{my_list}，转为字符串:{str(my_list)}")
+print(f"列表:{my_list}，转为集合:{set(my_list)}")
+
+print(f"元组:{my_tuple}，转为列表:{list(my_tuple)}")
+print(f"元组:{my_tuple}，转为字符串:{str(my_tuple)}")
+print(f"元组:{my_tuple}，转为集合:{set(my_tuple)}")
+
+print(f"字符串:{my_str}，转为列表:{list(my_str)}")
+print(f"字符串:{my_str}，转为元组:{tuple(my_str)}")
+print(f"字符串:{my_str}，转为集合:{set(my_str)}")
+
+print(f"集合:{my_set}，转为列表:{list(my_set)}")
+print(f"集合:{my_set}，转为元组:{tuple(my_set)}")
+print(f"集合:{my_set}，转为字符串:{str(my_set)}")
