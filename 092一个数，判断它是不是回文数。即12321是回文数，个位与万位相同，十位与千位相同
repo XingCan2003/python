@@ -1,0 +1,26 @@
+#1
+a = int(input("请输入一个数字:\n"))
+x = str(a)
+flag = True
+for i in range(len(x) // 2):
+    if x[i] != x[-i - 1]:
+        flag = False
+        break
+if flag:
+    print("%d 是一个回文数!" % a)
+else:
+    print("%d 不是一个回文数!" % a)
+#2
+a = input("输入一串数字: ")
+b = a[::-1]
+print(b)
+if a == b:
+    print("%s 是回文"% a)
+else:
+    print("%s 不是回文"% a)
+#3
+num = input('请输入一个数字:')
+if num[0] == num[-1] and num[1] == num[-2]:
+    print('%s 是一个回文数！' % num)
+else:
+    print('%s 不是一个回文数！' % num)
