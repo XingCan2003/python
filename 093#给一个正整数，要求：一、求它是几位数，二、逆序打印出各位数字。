@@ -1,0 +1,17 @@
+#给一个不多于5位的正整数，要求：一、求它是几位数，二、逆序打印出各位数字。
+num = int(input('请输入一个数字:'))
+list1 = []
+count = 0
+while (True):
+     if num // 10 == 0:
+         list1.append(num % 10)
+         count+=1
+         break
+     else:
+         list1.append(num % 10)
+         num = num // 10
+         count+=1
+print(f'这是一个{count}位数')
+
+for i in range(0,len(list1)):
+    print(f'{list1[i]} ',end=" ")
