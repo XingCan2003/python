@@ -1,0 +1,17 @@
+def output(l):
+    j = 0
+    if l == 0:
+        j = 1
+    else:
+        j = l * output(l-1)
+    return j
+
+print(output(5))
+
+def Factorial(n):
+    if n == 1:
+        fn=1
+    else:
+        fn = n*Factorial(n-1)
+    return fn
+print(Factorial(5))
