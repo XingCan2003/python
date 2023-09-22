@@ -1,15 +1,15 @@
 import time
 
-print(time.time())
-print(time.localtime())
-print(time.asctime())
-print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()))
+print(time.time())  #返回当前时间的时间戳（1970纪元后经过的浮点秒数）
+print(time.localtime())  #格式化时间戳为本地的时间，如果参数为输入，则以当前时间为转换标准。
+print(time.asctime())  #接受时间元组并返回可乘的形式
+print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime())) #用于格式化时间，返回以可读字符串表示的当地时间，格式由参数 format 决定。
+
 
 import datetime
-
-print(datetime.date.today())
-print(datetime.date.today().strftime('%d/%m/%Y'))
-print(datetime.date(1941, 1, 5))
+print(datetime.date.today()) #获取今天日期
+print(datetime.date.today().strftime('%d/%m/%Y')) #按指定格式输出
+print(datetime.date(1941, 1, 5)) #输出指定日期
 
 import datetime
 
