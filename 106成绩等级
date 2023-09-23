@@ -1,0 +1,25 @@
+# 成绩等级
+grade = int(input('请输入你的成绩:'))
+while(True):
+    if grade >= 90:
+        print(f'{grade} 属于 A')
+        break
+    elif grade < 90 and grade >= 80:
+        print(f'{grade} 属于 B')
+    elif grade < 80 and grade >= 60:
+        print(f'{grade} 属于 C')
+    else:
+        print(f'{grade} 属于 D')
+
+使用range
+# def k(x):
+#     if x in range(60):
+#         print('D')
+#     elif x in range(60,80):
+#         print('C')
+#     elif x in range(80,90):
+#         print('B')
+#     else:
+#         print('A')
+# score = int(input('输入分数:\n'))
+# k(score)
