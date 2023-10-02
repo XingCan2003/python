@@ -1,0 +1,44 @@
+a = [1,2,3]
+b = a[:]
+print(b)
+a = [1,2,3]
+b = a
+print(b)
+a = [1,2,3]
+b = a[:]
+print(b)
+a[0] = 0
+print(a)
+print(b)
+a = [1,2,3]
+b = a
+print(b)
+a[0] = 0
+print(a)
+print(b)
+
+a = [1,2,3,4,5,6,7,8,9]
+b = a*1
+print(b)
+
+import copy
+a = [1,2,3,4,5]
+b = ["A","B",a]
+#浅拷贝
+c = b[:]
+print(c)
+['A', 'B', [1, 2, 3, 4, 5]]
+a[0] = 11
+print(c)
+['A', 'B', [11, 2, 3, 4, 5]]
+#此时a变化c跟着变化
+#深拷贝
+c = copy.deepcopy(b)
+print(c)
+['A', 'B', [11, 2, 3, 4, 5]]
+a[0] = 111
+print(a)
+[111, 2, 3, 4, 5]
+print(c)
+['A', 'B', [11, 2, 3, 4, 5]]
+#此时c中数据不受a影响
