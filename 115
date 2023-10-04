@@ -1,0 +1,48 @@
+# 输入三个数，然后从小到大输出
+a = int(input('请输入第一个数字:'))
+b = int(input('请输入第二个数字:'))
+c = int(input('请输入第三个数字:'))
+while(True):
+    if a < b:
+        tmp = b
+        b = a
+        a= tmp
+    if a < c:
+        tmp = c
+        c = a
+        a = tmp
+    if b < c:
+        tmp = c
+        c = b
+        b = tmp
+    break
+print(f'{c}<{b}<{a}')
+
+l = []
+for i in range(3):
+    x = int(input('integer:\n'))
+    l.append(x)
+l.sort()
+print(l)
+
+x= int(input("int1:"))
+y= int(input("int2:"))
+Max = max(x,y)
+Min = min(x,y)
+z= int(input("int3:"))
+if z > Max :
+    print(Min,Max,z)
+elif z < Min :
+    print(z,Min,Max)
+else :
+    print(Min,z,Max)
+
+
+x = int(input("x:"))
+y = int(input("y:"))
+z = int(input("z:"))
+a = {"x":x,"y":y,"z":z}
+print('--------分割线--------')
+for w in sorted(a, key=a.get):
+    print(w, a[w])
+
