@@ -1,0 +1,19 @@
+#循环
+import random
+import string
+def generate_code():
+    code = ''
+    # 生成4位验证码
+    for i in range(4):
+        # 随机选择数字或字母
+        if random.randint(0, 1) == 0: #产生0-9随机数字
+            code += random.choice(string.digits)
+        else:                               #产生随机字母
+            code += random.choice(string.ascii_letters)
+    return code
+print(generate_code())
+
+#推导式
+x = [random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') for _ in range(4)]
+x = ''.join(x)
+print(x)
