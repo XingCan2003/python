@@ -1,0 +1,9 @@
+#用列表接收输入的元素，然后双层循环遍历查找重复元素并删除
+
+list1 = input('请输入元素:').split()
+print(list1)
+for i in range(0, len(list1)):
+    for j in range(i + 1, len(list1)):
+        if list1[i] == list1[j]:
+            del list1[j]
+print(list1)
