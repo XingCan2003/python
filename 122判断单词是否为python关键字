@@ -1,0 +1,17 @@
+#python关键字都存储在keyword模块的变量kwlist中，因默认为列表类型，所以先转为元组类型，然后使用循环遍历元组，判断单词是否为关键字
+import keyword
+tup2 = tuple(keyword.kwlist)
+word = input('请输入一个单词:')
+switch1 = 0
+for i in range(len(tup2)):
+    if tup2[i] == word:
+       switch1 = 1
+if switch1 :
+    print('这个单词是python关键字')
+else:
+    print('这个单词不是python关键字')
+
+
+
+
+    
