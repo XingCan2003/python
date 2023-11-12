@@ -1,3 +1,4 @@
+#方法1
 import random
 import string
 def generate_code():
@@ -12,7 +13,7 @@ def generate_code():
     return code
 print(generate_code())
 
-import random
+#方法2
 x = [random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') for _ in range(4)]
 x = ''.join(x)
 print(x)
