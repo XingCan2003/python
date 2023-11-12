@@ -1,0 +1,10 @@
+#使用列表接收输入的单词，然后判断单词是否在字典中，第一次出现的单词放入字典中，然后输出字典内容
+import re
+words = input("请输入若干单词，以空格分隔:").split() # 将输入的单词分割成列表
+word_dict = {} # 初始化一个空字典
+for word in words:
+    if word not in word_dict: # 如果单词不在字典中，则将其添加到字典中
+        word_dict[word] = 1
+for key in sorted(word_dict.keys()): # 对字典的键进行排序并输出
+    print(key)
+
