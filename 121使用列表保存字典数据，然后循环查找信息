@@ -1,0 +1,12 @@
+#创建列表保存字典描述的学生数据，输入学生姓名，使用循环遍历查找，然后输出
+def main():
+    students = [{"no": 1, "name": "lmc", "score": 99}, {"no": 2, "name": "zzw", "score": 90}
+        , {"no": 3, "name": "hhh", "score": 100}, {"no": 4, "name": "lj", "score": 95}]
+    name = input("输入学生姓名:")
+    for i in students:
+        if i["name"] == name:
+            print("学号：", i["no"], "姓名：", i["name"], "成绩：", i["score"])
+
+
+if __name__ == '__main__':
+    main()
