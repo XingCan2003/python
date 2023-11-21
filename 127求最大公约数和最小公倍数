@@ -1,0 +1,26 @@
+# 3、编写并测试函数gcd(m,n)和lcm(m,n)，
+# 其功能是求两个整数m、n的最大公约数和最小公倍数
+
+def gcd(m,n):#求最大公约数，辗转相除法
+    r = 0
+    while(m%n):
+        r = m % n
+        m = n
+        n = r
+    return n
+m = int(input('请输入数字m:'))
+n = int(input('请输入数字n:'))
+print(f'最小公约数为:{gcd(m,n)}')
+
+
+def lcm(m,n): #求最小公倍数，穷举法
+    min1 = min(m,n)
+    max1 = max(m,n)
+    for i in range(2,max1+1):
+       if min1 * i % m ==0 and min1 * i % n ==0:
+           min1 *= i
+           break
+    return min1
+m = int(input('请输入数字m:'))
+n = int(input('请输入数字n:'))
+print(f'最小公倍数为:{lcm(m, n)}')
