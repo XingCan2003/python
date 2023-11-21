@@ -1,0 +1,20 @@
+#sorted函数对可迭代对象进行排序，返回一个新的列表。
+#使用copy函数，复制原列表，便于取出最小元素后可进行删除，
+#然后取列表m内的最小元素，添加到新列表r中，删除m列表的最小元素，再找最小元素
+
+def s(ls):
+    m = ls.copy()
+    r = []
+    for i in range(5):
+        t = min(m)
+        r.append(t)
+        m.remove(t)
+    return r
+
+ls = []
+n = int(input('请输入列表长度n:'))
+for i in range(n):
+    ls.append(int(input(f'请输入第{i+1}个列表元素:')))
+    
+print('原列表为：', ls)
+print('排序后的结果：', s(ls))
