@@ -1,0 +1,14 @@
+# 编写函数isodd(x)，如果x不是整数，给出提示后退出程序；
+# 如果x为奇数，返回True；如果x为偶数，返回False。
+
+def isodd(x):
+    while(x):
+        if x % 1 != 0:
+            print(f'数字{x}不是整数')
+            break
+        elif x % 2 == 0:
+            return False
+        else:
+            return True
+x = float(input('请输入一个数字:'))
+print(isodd(x))
