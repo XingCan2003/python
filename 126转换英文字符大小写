@@ -1,0 +1,18 @@
+# 2、编写函数change(str1)，其功能是对参数str1进行大小写转换，
+# 将大写字母转换成小写字母；小写字母转换成大写字母；非英文字符不转换。
+
+def change(str1):
+    str1 = list(str1) #先把字符串转换为列表，以便替换大小写
+    for i in range(0,len(str1)):
+        if 97 <= ord(str1[i]) <= 122:  #ord函数把字符转换为ASCLL，
+# ‘a’的ASCLL为97，先判断元素的ascll是否为小写英文字符，然后减去32，得到对应的大写英英文字符
+            str1[i] = chr(ord(str1[i]) - 32) #chr函数把ASCLL转为字符
+        elif 65 <= ord(str1[i]) <= 90:
+            str1[i] = chr(ord(str1[i]) + 32)
+        else:    #除了英文字符，其他字符不做处理
+            continue
+    return str1
+str1 = input('请输入一段字符:')
+str1 = change(str1)
+str1 = "".join(str1) #把列表转回字符串形式输出
+print(str1)
