@@ -1,0 +1,34 @@
+#求回文数
+# 把x赋值给y，并转换形式为字符串，然后使用for循环将y倒序输出，和x逐位比较，
+# 不同则返回False，相同则继续遍历下一位，直到全部比较完，全相同就返回True，
+# 另外一种方法，是使用while循环，先把x的长度赋值给y，一样转为字符串，i和j分别定义为0和最后一位的下标，然后相互比较，左边为x原数值，右边位x倒序位数值
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        x = str(x)
+        y = str(x)
+        j = 0
+        for i in range(len(x)-1,-1,-1): #起始为len(x)-1，终端为-1（无法取到），步长为-1
+            if y[i] == x[j]:
+                j += 1
+            else:
+                return False
+        return True
+
+
+#另一种常见解法
+class Solution:
+#     def isPalindrome(self, x: int) -> bool:
+#         x = str(x)
+#         y = len(x)
+#         i, j = 0, y-1
+#         while i < j:
+#             if x[i] == x[j]:#x[i]为x正序数值，x[j]为x倒序数值
+#                 i += 1
+#                 j -= 1
+#             else:
+#                 return False
+#         return True
+
+#暴力解答
+# def isPa(x):
+#     return x >= 0 and (s := str(x)) == s[::-1]
